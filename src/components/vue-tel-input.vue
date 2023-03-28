@@ -340,6 +340,8 @@ export default {
           this.phone = oldValue;
           this.onInput();
         });
+      } else if (this.phoneObject && this.phoneObject.formatted) {
+        this.phone = this.phoneObject.formatted;
       } else {
         this.phone = value;
       }
